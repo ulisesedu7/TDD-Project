@@ -19,4 +19,16 @@ class Solver
   def reverse(word)
     word.reverse
   end
+
+  def fizzbuzz(n)
+    fizzbuzz_string = n.to_s
+    if (n%3).zero? && (n%5).zero?
+      fizzbuzz_string = 'fizzbuzz'
+    elsif (n%3).zero?
+      fizzbuzz_string = 'fizz'
+    elsif (n%5).zero?
+      fizzbuzz_string = 'buzz'
+    end
+    fizzbuzz_string
+  end
 end
