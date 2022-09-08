@@ -2,8 +2,10 @@ class Solver
   def factorial(n)
     factorial = 1;
 
-    if n == 0
-      puts "Error, cannot calculate the factorial of cero"
+    if n < 0
+      return "Error, cannot calculate the factorial of negative numbers"
+    elsif n == 0
+      return factorial
     else
       i = 1
       while i <= n
@@ -11,7 +13,6 @@ class Solver
         i += 1
       end
     end
-
     factorial
   end
 end
