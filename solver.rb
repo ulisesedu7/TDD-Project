@@ -1,18 +1,19 @@
 class Solver
-  def factorial(n)
-    factorial = 1;
+  def factorial(num)
+    factorial = 1
 
-    if n < 0
-      return "Error, cannot calculate the factorial of negative numbers"
-    elsif n == 0
-      return factorial
-    else
+    return 'Error, cannot calculate the factorial of negative numbers' if num.negative?
+
+    return factorial if num.zero?
+
+    unless num.zero?
       i = 1
-      while i <= n
-        factorial = factorial * i
+      while i <= num
+        factorial *= i
         i += 1
       end
     end
+
     factorial
   end
 
@@ -20,13 +21,13 @@ class Solver
     word.reverse
   end
 
-  def fizzbuzz(n)
-    fizzbuzz_string = n.to_s
-    if (n%3).zero? && (n%5).zero?
+  def fizzbuzz(num)
+    fizzbuzz_string = num.to_s
+    if (num % 3).zero? && (num % 5).zero?
       fizzbuzz_string = 'fizzbuzz'
-    elsif (n%3).zero?
+    elsif (num % 3).zero?
       fizzbuzz_string = 'fizz'
-    elsif (n%5).zero?
+    elsif (num % 5).zero?
       fizzbuzz_string = 'buzz'
     end
     fizzbuzz_string
