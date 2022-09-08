@@ -15,4 +15,8 @@ class Solver
     end
     factorial
   end
+
+  def reverse(word)
+    word.reverse
+  end
 end
